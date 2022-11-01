@@ -3500,7 +3500,7 @@ Created using IcoMoon - icomoon.io
     padding-right: 0; }
 
 .footer {
-  padding: 24px 0; }
+  padding: 0px 0; }
   .footer.footer-default {
     background-color: #f2f2f2; }
   .footer nav {
@@ -3772,6 +3772,11 @@ Created using IcoMoon - icomoon.io
 
 .section {
   padding: 70px 0;
+  position: relative;
+  background: #FFFFFF; }
+
+.section#experience, .section#education, .section#skill{
+  padding: 0px 0;
   position: relative;
   background: #FFFFFF; }
   .section .row + .category {
@@ -5290,3 +5295,9 @@ a.credit {
 /* Common Style */
 .section {
   padding-bottom: 0; }
+
+.vertical-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
