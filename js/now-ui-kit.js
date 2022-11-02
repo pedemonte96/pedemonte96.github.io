@@ -110,24 +110,13 @@ $(document).on('click', '.navbar-toggler', function() {
     if (nowuiKit.misc.navbar_menu_visible == 1) {
         $('html').removeClass('nav-open');
         nowuiKit.misc.navbar_menu_visible = 0;
-        $('#bodyClick').remove();
         setTimeout(function() {
             $toggle.removeClass('toggled');
-        }, 550);
+        }, 150);
     } else {
         setTimeout(function() {
             $toggle.addClass('toggled');
-        }, 580);
-        div = '<div id="bodyClick"></div>';
-        $(div).appendTo('body').click(function() {
-            $('html').removeClass('nav-open');
-            nowuiKit.misc.navbar_menu_visible = 0;
-            setTimeout(function() {
-                $toggle.removeClass('toggled');
-                $('#bodyClick').remove();
-            }, 550);
-        });
-
+        }, 150);
         $('html').addClass('nav-open');
         nowuiKit.misc.navbar_menu_visible = 1;
     }
@@ -235,3 +224,59 @@ function debounce(func, wait, immediate) {
         if (immediate && !timeout) func.apply(context, args);
     };
 };
+
+// Smooth scroll for links with hashes
+$('a.smooth-scroll')
+.click(function(event) {
+  // On-page links
+  if (
+    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+    && 
+    location.hostname == this.hostname
+  ) {
+    // Figure out element to scroll to
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    // Does a scroll target exist?
+    if (target.length) {
+      // Only prevent default if animation is actually gonna happen
+      event.preventDefault();
+      $('html, body').animate({
+        scrollTop: target.offset().top
+      }, 1000, function() {
+        // Callback after animation
+        // Must change focus!
+        var $target = $(target);
+        $target.focus();
+        if ($target.is(":focus")) { // Checking if the target was focused
+          return false;
+        } else {
+          $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+          $target.focus(); // Set focus again
+        };
+      });
+    }
+    // Close navbar after clicking
+    $toggle = $('.navbar-toggler');
+    if (nowuiKit.misc.navbar_menu_visible == 1) {
+        $('html').removeClass('nav-open');
+        nowuiKit.misc.navbar_menu_visible = 0;
+        setTimeout(function() {
+            $toggle.removeClass('toggled');
+        }, 150);
+    }
+  }
+});
+
+// Close navbar when clicking outside
+$(document).on('click', '.page-content, .footer, #navigation', function() {
+    $toggle = $('.navbar-toggler');
+
+    if (nowuiKit.misc.navbar_menu_visible == 1) {
+        $('html').removeClass('nav-open');
+        nowuiKit.misc.navbar_menu_visible = 0;
+        setTimeout(function() {
+            $toggle.removeClass('toggled');
+        }, 150);
+    }
+});
