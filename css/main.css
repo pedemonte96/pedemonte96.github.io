@@ -5227,7 +5227,7 @@ Created using IcoMoon - icomoon.io
   color: #fff; }
 
 @media (min-width: 768px) {
-.cc-experience, .cc-experience-header, .cc-education, .cc-education-header {
+.cc-experience-header, .cc-education-header {
   padding-right: 0; } }
 
 /* References Style */
