@@ -2270,6 +2270,7 @@ p {
   font-weight: 300; }
 
 .category {
+  margin-bottom: 5px;
   text-transform: uppercase;
   font-weight: 700;
   color: #9A9A9A; }
@@ -3436,7 +3437,7 @@ Created using IcoMoon - icomoon.io
 
 .card {
   border: 0;
-  border-radius: 0.1875rem;
+  border-radius: 6px;
   display: inline-block;
   position: relative;
   overflow: hidden;
@@ -5218,6 +5219,9 @@ Created using IcoMoon - icomoon.io
   color: #fff;
   text-transform: uppercase; }
 
+.cc-experience .h5 {
+  margin-bottom: 0; }
+
 /* Education Style */
 .cc-education .h5 {
   margin-bottom: 0; }
@@ -5319,7 +5323,7 @@ a.credit {
   cursor: pointer;
   margin-left: 15px;
   border: none;
-  border-radius: 0.1875rem;
+  border-radius: 6px;
   text-align: center;
   font-size: 15px;
   float: right;
