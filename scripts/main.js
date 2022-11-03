@@ -8,3 +8,21 @@ $(document).ready(function() {
   }); // initialize animate on scroll library
 });
 
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    //console.log(this.id);
+    //console.log(this.parentElement.parentElement.getElementsByClassName("content_collapsible")[0]);
+    this.classList.toggle("active_collapsible");
+    //const name = "collapse_content_" + this.id.replace('collapsible_button_','');
+    //console.log(name);
+    var content = this.parentElement.parentElement.getElementsByClassName("content_collapsible")[0];
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}

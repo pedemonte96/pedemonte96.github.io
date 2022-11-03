@@ -5312,3 +5312,47 @@ a.credit {
   top: -60px;
   visibility: hidden;
 }
+
+/* Collapse info */
+.collapsible {
+  background-color: #0096ff;
+  cursor: pointer;
+  margin-left: 15px;
+  border: none;
+  border-radius: 0.1875rem;
+  text-align: center;
+  font-size: 15px;
+  float: right;
+  height: 35px;
+  width: 35px;
+}
+
+.active_collapsible, .collapsible:hover {
+  background-color: #0078cc;
+}
+
+.collapsible:after {
+  content: "\002B"; /* Unicode character for "plus" sign (+) */
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.active_collapsible:after {
+  content: "\2212"; /* Unicode character for "minus" sign (-) */
+}
+
+.content_collapsible {
+  padding: 0 0px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #fff1f1;
+}
+
+button:active {
+  outline: none;
+  border: none;
+  }
+  
+button:focus {outline:0;}
