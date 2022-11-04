@@ -5359,3 +5359,9 @@ button:active {
   }
   
 button:focus {outline:0;}
+
+#two_columns_list {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
