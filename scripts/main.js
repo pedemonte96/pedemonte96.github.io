@@ -2,6 +2,7 @@
 // Don't forget to add it into respective layouts where this js file is needed
 
 $(document).ready(function() {
+  document.getElementById("age").textContent = martisAge();
   AOS.init( {
     // uncomment below for on-scroll animations to played only once
     // once: true  
@@ -25,4 +26,15 @@ for (i = 0; i < coll.length; i++) {
       content.style.maxHeight = content.scrollHeight + "px";
     }
   });
+}
+
+function martisAge() {
+  var today = new Date();
+  const birthday_this = new Date(today.getFullYear(), 10, 28);
+  var years = today.getFullYear()-1996;
+  if(today<birthday_this){
+    years = years - 1;
+  }
+  //console.log(years)
+  return years.toString();
 }
