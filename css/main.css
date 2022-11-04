@@ -2577,6 +2577,7 @@ body {
     width: 17px; }
   .navbar.navbar-transparent {
     background-color: transparent !important;
+    background-image: linear-gradient(rgba(0,0,0,1) 0%, rgba(0,0,0,0.3) 60%, transparent 100%);
     box-shadow: none;
     color: #FFFFFF;
     padding-top: 20px; }
