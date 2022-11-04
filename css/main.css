@@ -5310,6 +5310,14 @@ a.credit {
   align-items: center;
 }
 
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .anchor {
   display: block;
   position: relative;
@@ -5364,4 +5372,11 @@ button:focus {outline:0;}
   columns: 2;
   -webkit-columns: 2;
   -moz-columns: 2;
+}
+
+.container_image {
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  font-size: 13px;
 }
