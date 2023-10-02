@@ -204,7 +204,7 @@ sup {
 }
 
 a {
-    color: #007bff;
+    color: var(--main-color);
     text-decoration: none;
     background-color: transparent;
     -webkit-text-decoration-skip: objects
@@ -1958,8 +1958,8 @@ fieldset[disabled] a.btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff
+    background-color: var(--main-color);
+    border-color: var(--main-color)
 }
 
 .btn-primary:hover {
@@ -1975,8 +1975,8 @@ fieldset[disabled] a.btn {
 
 .btn-primary.disabled,
 .btn-primary:disabled {
-    background-color: #007bff;
-    border-color: #007bff
+    background-color: var(--main-color);
+    border-color: var(--main-color)
 }
 
 .btn-primary.active,
@@ -2205,16 +2205,16 @@ fieldset[disabled] a.btn {
 }
 
 .btn-outline-primary {
-    color: #007bff;
+    color: var(--main-color);
     background-color: transparent;
     background-image: none;
-    border-color: #007bff
+    border-color: var(--main-color)
 }
 
 .btn-outline-primary:hover {
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff
+    background-color: var(--main-color);
+    border-color: var(--main-color)
 }
 
 .btn-outline-primary.focus,
@@ -2224,7 +2224,7 @@ fieldset[disabled] a.btn {
 
 .btn-outline-primary.disabled,
 .btn-outline-primary:disabled {
-    color: #007bff;
+    color: var(--main-color);
     background-color: transparent
 }
 
@@ -2232,8 +2232,8 @@ fieldset[disabled] a.btn {
 .btn-outline-primary:active,
 .show>.btn-outline-primary.dropdown-toggle {
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff
+    background-color: var(--main-color);
+    border-color: var(--main-color)
 }
 
 .btn-outline-secondary {
@@ -2462,7 +2462,7 @@ fieldset[disabled] a.btn {
 
 .btn-link {
     font-weight: 400;
-    color: #007bff;
+    color: var(--main-color);
     border-radius: 0
 }
 
@@ -2645,7 +2645,7 @@ tbody.collapse.show {
 .dropdown-item:active {
     color: #fff;
     text-decoration: none;
-    background-color: #007bff
+    background-color: var(--main-color)
 }
 
 .dropdown-item.disabled,
@@ -2996,11 +2996,11 @@ tbody.collapse.show {
 
 .custom-control-input:checked~.custom-control-indicator {
     color: #fff;
-    background-color: #007bff
+    background-color: var(--main-color)
 }
 
 .custom-control-input:focus~.custom-control-indicator {
-    box-shadow: 0 0 0 1px #fff, 0 0 0 3px #007bff
+    box-shadow: 0 0 0 1px #fff, 0 0 0 3px var(--main-color)
 }
 
 .custom-control-input:active~.custom-control-indicator {
@@ -3043,7 +3043,7 @@ tbody.collapse.show {
 }
 
 .custom-checkbox .custom-control-input:indeterminate~.custom-control-indicator {
-    background-color: #007bff;
+    background-color: var(--main-color);
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='%23fff' d='M0 2h4'/%3E%3C/svg%3E")
 }
 
@@ -3238,7 +3238,7 @@ tbody.collapse.show {
 .nav-pills .nav-link.active,
 .show>.nav-pills .nav-link {
     color: #fff;
-    background-color: #007bff
+    background-color: var(--main-color)
 }
 
 .nav-fill .nav-item {
@@ -3872,8 +3872,8 @@ tbody.collapse.show {
 .page-item.active .page-link {
     z-index: 2;
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff
+    background-color: var(--main-color);
+    border-color: var(--main-color)
 }
 
 .page-item.disabled .page-link {
@@ -3889,7 +3889,7 @@ tbody.collapse.show {
     padding: .5rem .75rem;
     margin-left: -1px;
     line-height: 1.25;
-    color: #007bff;
+    color: var(--main-color);
     background-color: #fff;
     border: 1px solid #ddd
 }
@@ -3964,7 +3964,7 @@ tbody.collapse.show {
 
 .badge-primary {
     color: #fff;
-    background-color: #007bff
+    background-color: var(--main-color)
 }
 
 .badge-primary[href]:focus,
@@ -4244,7 +4244,7 @@ tbody.collapse.show {
     height: 1rem;
     line-height: 1rem;
     color: #fff;
-    background-color: #007bff;
+    background-color: var(--main-color);
     transition: width .6s ease
 }
 
@@ -4326,8 +4326,8 @@ tbody.collapse.show {
 .list-group-item.active {
     z-index: 2;
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff
+    background-color: var(--main-color);
+    border-color: var(--main-color)
 }
 
 .list-group-flush .list-group-item {
@@ -5227,7 +5227,7 @@ button.close {
 }
 
 .bg-primary {
-    background-color: #007bff!important
+    background-color: var(--main-color)!important
 }
 
 a.bg-primary:focus,
@@ -5331,7 +5331,7 @@ a.bg-dark:hover {
 }
 
 .border-primary {
-    border-color: #007bff!important
+    border-color: var(--main-color)!important
 }
 
 .border-secondary {
@@ -7950,7 +7950,7 @@ a.bg-dark:hover {
 }
 
 .text-primary {
-    color: #007bff!important
+    color: var(--main-color)!important
 }
 
 a.text-primary:focus,
