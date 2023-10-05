@@ -3,9 +3,10 @@
 
 $(document).ready(function() {
   document.getElementById("age").textContent = martisAge();
+  document.getElementById("year").textContent = new Date().getFullYear().toString();
   AOS.init( {
     // uncomment below for on-scroll animations to played only once
-    // once: true  
+    once: true  
   }); // initialize animate on scroll library
 });
 
