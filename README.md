@@ -9,3 +9,4 @@ Directory Structure
 - `styles\`           - SCSS source files for stylesheets CSS.
 - `favicon.ico`       - Favicon used.
 - `index.html`        - Main HTML page to open in browser.
+
