@@ -4655,20 +4655,21 @@ Created using IcoMoon - icomoon.io
 .button-container .btn-default {
   margin-right: 8px; }
 
-/* Professional Skills Style */
-.progress-container {
-  margin-bottom: 20px;
-  font-size: 18px; }
-  .progress-container .progress-bar {
-    height: 5px;
-    transform: scaleX(0);
-    transition: transform 2s ease-in-out;
-    transform-origin: 0% 0%; }
-  .progress-container .progress {
-    height: 5px;
-    font-size: 18px; }
-  .progress-container .aos-animate {
-    transform: scaleX(1); }
+/* Skills Style */
+.skill-list { margin: 0; }
+.skill-list > div {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 1rem;
+  padding: 12px 0;
+  border-bottom: 1px solid #e9ecef; }
+.skill-list > div:last-child { border-bottom: 0; }
+.skill-list dt { color: var(--main-color); }
+.skill-list dd { margin: 0; }
+
+@media (max-width: 767px) {
+  .skill-list > div { grid-template-columns: 1fr; gap: 0; }
+}
 
 /* Experience Style */
 .cc-experience .cc-experience-header {
@@ -4757,6 +4758,15 @@ a.credit {
   text-decoration: none;
   cursor: pointer; }
 
+a[href^="http"]:not(.btn)::after {
+  content: "\f0c1";
+  font-family: FontAwesome;
+  font-size: .75em;
+  font-style: normal;
+  margin-left: .3em;
+  color: #888;
+}
+
 /* Common Style */
 .section {
   padding-bottom: 0; }
@@ -4812,10 +4822,7 @@ a.credit {
 }
 
 .content_collapsible {
-  padding: 0 0px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  display: none;
 }
 
 button:active {
@@ -4823,7 +4830,19 @@ button:active {
   border: none;
   }
   
-button:focus {outline:0;}
+button:focus-visible {
+  outline: 2px solid #005fcc;
+  outline-offset: 2px;
+}
+
+.easter-trigger {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: default;
+}
 
 #two_columns_list {
   columns: 2;
