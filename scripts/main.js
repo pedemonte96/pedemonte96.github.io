@@ -3,7 +3,6 @@
 // Don't forget to add it into respective layouts where this js file is needed
 
 $(document).ready(function() {
-  document.getElementById("age").textContent = martisAge();
   document.getElementById("year").textContent = new Date().getFullYear().toString();
   AOS.init( {
     // uncomment below for on-scroll animations to played only once
@@ -30,18 +29,6 @@ for (i = 0; i < coll.length; i++) {
     $(content).stop(true, true).slideToggle(200);
     this.setAttribute("aria-expanded", this.classList.contains("active_collapsible"));
   });
-}
-
-/** Calculate Martí's age. */
-function martisAge() {
-  var today = new Date();
-  const birthday_this = new Date(today.getFullYear(), 10, 28);
-  var years = today.getFullYear()-1996;
-  if(today<birthday_this){
-    years = years - 1;
-  }
-  //console.log(years)
-  return years.toString();
 }
 
 // Easter egg section
