@@ -705,7 +705,13 @@
 }
 
 #cv-button:hover {
+  background-color: var(--main-color-dark);
   transform: scale(1.03);
+}
+
+#cv-button:focus,
+#cv-button:active {
+  background-color: var(--main-color-dark);
 }
   
 .btn-primary {
@@ -4939,69 +4945,14 @@ button:focus-visible {
 }
 
 /* Profile page polish */
-.page-content > div > .section {
-  background-color: #f7f7f4;
-}
-
-.page-content .container {
-  max-width: 1120px;
-}
-
 .page-content .card {
   background-color: #fff;
   border: 1px solid #e5e8eb;
   box-shadow: 0 2px 12px rgba(15, 34, 53, 0.08);
 }
 
-.profile-page .page-header:before {
-  background-color: rgba(0, 34, 61, 0.42);
-}
-
-.profile-page .page-header.page-header-small {
-  height: 58vh;
-  min-height: 500px;
-  max-height: 500px;
-}
-
-@media (max-width: 767px) {
-  .profile-page .page-header.page-header-small {
-    height: 520px;
-    min-height: 520px;
-    max-height: 520px;
-  }
-}
-
-.cc-education .card {
-  margin-bottom: 24px;
-}
-
-.cc-education .bg-primary {
-  background-color: #f3f4f2 !important;
-}
-
-.cc-education .cc-education-header {
-  color: #263747;
-}
-
-.cc-education .cc-education-header img {
-  width: auto !important;
-  max-width: 130px !important;
-  max-height: 44px;
-  margin: 0 auto 10px !important;
-  padding: 7px 9px !important;
-  object-fit: contain;
-  border-radius: 4px;
-  background-color: #20394f;
-}
-
-.cc-education .card-body {
-  padding: 18px;
-}
-
 .cc-education-header .card-date {
-  margin: 0 0 8px;
-  font-size: .875rem;
-  line-height: 1.4;
+  margin: 0 0 10px;
 }
 
 .cc-profile-image a:before {
