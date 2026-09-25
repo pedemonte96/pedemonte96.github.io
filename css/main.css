@@ -26,15 +26,15 @@
  */
 
 :root{
-  --main-color: rgb(0, 84, 153);
-  --main-color-95: rgba(0, 84, 153, 0.95);
-  --main-color-40: rgba(0, 84, 153, 0.40);
-  --main-color-60: rgba(0, 84, 153, 0.60);
-  --main-color-70: rgba(0, 84, 153, 0.70);
-  --main-color-bright: rgb(0, 105, 190);
-  --main-color-bright-2: rgb(0, 119, 216);
-  --main-color-bright-3: rgb(0, 140, 255);
-  --main-color-dark: rgb(0, 54, 98);
+  --main-color: rgb(0, 76, 138);
+  --main-color-95: rgba(0, 76, 138, 0.95);
+  --main-color-40: rgba(0, 76, 138, 0.40);
+  --main-color-60: rgba(0, 76, 138, 0.60);
+  --main-color-70: rgba(0, 76, 138, 0.70);
+  --main-color-bright: rgb(0, 97, 175);
+  --main-color-bright-2: rgb(0, 110, 202);
+  --main-color-bright-3: rgb(0, 130, 237);
+  --main-color-dark: rgb(0, 49, 90);
   
 }
 
@@ -705,7 +705,13 @@
 }
 
 #cv-button:hover {
+  background-color: var(--main-color-dark);
   transform: scale(1.03);
+}
+
+#cv-button:focus,
+#cv-button:active {
+  background-color: var(--main-color-dark);
 }
   
 .btn-primary {
@@ -4655,6 +4661,12 @@ Created using IcoMoon - icomoon.io
 .button-container .btn-default {
   margin-right: 8px; }
 
+.button-container .linkedin-button:hover {
+  background-color: #0077b5; }
+
+.button-container .github-button:hover {
+  background-color: #6e5494; }
+
 /* Skills Style */
 .skill-list { margin: 0; }
 .skill-list > div {
@@ -4811,14 +4823,14 @@ a[href^="http"]:not(.btn)::after {
 }
 
 .collapsible:after {
-  content: "\002B"; /* Unicode character for "plus" sign (+) */
+  content: "\f078";
+  font-family: FontAwesome;
   color: white;
-  font-weight: bold;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .active_collapsible:after {
-  content: "\2212"; /* Unicode character for "minus" sign (-) */
+  content: "\f077";
 }
 
 .content_collapsible {
@@ -4936,4 +4948,29 @@ button:focus-visible {
   .modal-content {
     width: 100%;
   }
+}
+
+/* Profile page polish */
+.page-content .card {
+  background-color: #fff;
+  border: 1px solid #e5e8eb;
+  box-shadow: 0 2px 12px rgba(15, 34, 53, 0.08);
+}
+
+.cc-education-header .card-date {
+  margin: 0 0 10px;
+}
+
+.cc-profile-image a:before {
+  display: none;
+}
+
+.cc-profile-image a:hover img {
+  transform: none;
+}
+
+[data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
 }
