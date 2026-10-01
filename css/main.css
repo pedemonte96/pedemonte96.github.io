@@ -3064,6 +3064,11 @@ Created using IcoMoon - icomoon.io
 .profile-page .category {
   text-align: center; }
 
+.profile-page .page-header .category {
+  max-width: 700px;
+  margin-inline: auto;
+  text-wrap: balance; }
+
 .profile-page h5.description {
   max-width: 700px;
   margin: 20px auto 75px; }
